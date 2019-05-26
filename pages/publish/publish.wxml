@@ -1,0 +1,10 @@
+<textarea class="textarea" placeholder="这一刻的想法..." value="{{details}}"  bindinput='limit'>
+</textarea>
+<view class='image_show'>
+  <view wx:for="{{tempFilePaths}}" wx:key="tempFilePaths_id">
+    <image class="image" src="{{item.path}}"></image>
+  </view>
+</view>
+<button style='margin-top:50rpx;width:500rpx' type='primary' bindtap='publish'>
+  发布
+</button>

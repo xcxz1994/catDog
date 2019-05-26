@@ -1,0 +1,116 @@
+/**index.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  padding-top: 30rpx ;  
+} 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.row{
+   display: flex;
+  flex-direction: row;
+}
+.column{
+   display: flex;
+  flex-direction: column;
+}
+.row-day{
+   display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.text{
+  display: flex;
+   flex-direction: row;
+ 
+  margin-left: 36rpx;
+}
+
+.userinfo-host{
+display: flex;
+  flex-direction: column;
+  align-items: center;
+   margin-right: 120rpx;
+}
+.userinfo-pet{
+display: flex;
+  flex-direction: column;
+  align-items: center;
+   margin-left: 120rpx;
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:auto;
+
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+     margin-bottom: 10rpx;
+}
+
+.heart {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 30rpx
+}
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 100%; 
+    color:#434343;
+    font-size: 0.8em;
+}
+
+.active{
+    color:#F65959;
+    border-bottom: 4rpx solid #F65959;
+}
+.swiper{
+  text-align: center;
+}
+.usermotto {
+  position:fixed;
+  bottom:0;
+  display:flex;
+  width:100%;
+  justify-content:center;
+  
+}
+
+.image{
+  height: 150rpx;
+  margin-left: 36rpx;
+  width: 150rpx;
+}
+.image_show{
+   display: flex;
+ flex-direction:row;
+ /* 如果这行放不下则强行自动换行 */
+ flex-wrap: wrap;  
+
+}

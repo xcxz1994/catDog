@@ -1,0 +1,15 @@
+.textarea{
+
+}
+.image{
+  height: 200rpx;
+  margin-left: 50rpx;
+  width: 200rpx;
+}
+.image_show{
+   display: flex;
+ flex-direction:row;
+ /* 如果这行放不下则强行自动换行 */
+ flex-wrap: wrap;  
+
+}
