@@ -6,12 +6,6 @@ App({
   globalData: {
     userInfo: null
   },
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-  },
     //callback函数，用于回调
     callback: function() {
     return new Promise((resolve) => {
@@ -29,7 +23,7 @@ App({
               wx.setStorageSync('userInfo', res.userInfo);
               //发送请求
               wx.request({
-                url: 'http://192.168.21.223:8080/Pet/MyServlet?method=user_info', //接口地址
+                url: 'http://192.168.1.103:8080/Pet/MyServlet?method=user_info', //接口地址
                 data: {
                   code: code,
                   appsercet: AppSecret,

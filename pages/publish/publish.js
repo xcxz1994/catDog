@@ -26,7 +26,7 @@ Page({
    var create_time = (new Date()).getTime();
     //上传文本
     wx.request({
-      url: 'http://192.168.21.223:8080/Pet/MyServlet?method=uploadText',
+      url: 'http://192.168.1.103:8080/Pet/MyServlet?method=uploadText',
       data: {
         openid: getApp().globalData.openid,
         text:this.data.text,
@@ -49,7 +49,7 @@ Page({
       var imgUrl = this.data.tempFilePaths[i].path;  //每次循环用变量承接每个图片文件
       wx.uploadFile({
         //上传图片的网路请求地址
-        url: 'http://192.168.21.223:8080/Pet/MyServlet?method=uploadPicture',
+        url: 'http://192.168.1.103:8080/Pet/MyServlet?method=uploadPicture',
         //选择
         header: { "Content-Type": "multipart/form-data" },//类型
         filePath: imgUrl,

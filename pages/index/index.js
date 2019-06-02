@@ -1,14 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp();
-var util = require('../../utils/util.js')
+// var util = require('../../utils/util.js')  目前没用到
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {}, 
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     tempFilePaths:'',
     list_index:[],
     currentTab:'',
@@ -16,12 +13,7 @@ Page({
     height_swiper:'' , //swiper的高度
      height_scroll:''  //scroll的高度
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+
   onLoad: function () {
     var that=this;
     //获取屏幕高宽比例
@@ -34,7 +26,7 @@ Page({
         console.log("calc", calc);
         getApp().globalData.winHeight = calc;
           that.setData({
-            height_swiper:calc-360,
+            height_swiper:calc-360,  //？？
             height_scroll:calc-314
           })  
       }
@@ -45,7 +37,7 @@ Page({
         })
         //连接数据库取出数据
       wx.request({
-        url: 'http://192.168.21.223:8080/Pet/MyServlet?method=take',
+        url: 'http://192.168.1.103:8080/Pet/MyServlet?method=take',
         data: {
           openid: getApp().globalData.openid
         },
@@ -72,15 +64,15 @@ Page({
 
 
  
-  //获取用户信息
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+  // //获取用户信息
+  // getUserInfo: function(e) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true
+  //   })
+  // },
 
   //调用手机相册摄像头
   pic: function (options) {

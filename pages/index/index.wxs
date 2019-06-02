@@ -7,7 +7,11 @@ var Sub_month = function (val) {
 var Sub_day = function (val) {
   return val.substring(6, 8)
 }
+var Sub_MonthandDay=function(val){
+  return val.substring(4,8)
+}
 //exports: 通过该属性，对外共享本模块的私有变量与函数。
 module.exports.Sub_year = Sub_year;
 module.exports.Sub_month = Sub_month;
 module.exports.Sub_day = Sub_day;
+module.exports.Sub_MonthandDay = Sub_MonthandDay;

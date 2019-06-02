@@ -35,9 +35,9 @@
         </view>
       <view class='row-day' wx:for="{{list_index}}" wx:key="list_index_id">
         <view>
-          {{string.Sub_month(item.day)}}
+          {{string.Sub_MonthandDay(item.day)}}
         </view>
-        <view class='column'>
+        <view class='column' style='margin-left:30rpx'>
         <view wx:for="{{item.moment}}" wx:key="item.moment_id"  class='column'>    
         <view class='text'>{{item.text}}</view>   
           <view class='image_show'>
